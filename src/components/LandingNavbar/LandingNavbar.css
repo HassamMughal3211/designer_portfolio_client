@@ -1,0 +1,16 @@
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mainNavbar{
+    height: 10vh;
+    background-color: var(--navbarBackground);
+}
+
+.menuOptions span {
+    cursor: pointer;
+    color: var(--white);
+    font-weight: bold;
+}
