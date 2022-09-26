@@ -1,1 +1,0 @@
-export const url = "https://sgi-stripe.herokuapp.com/api/v1"
