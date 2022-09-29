@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
     <LandingNavbar />
-    <Grid container className="flex" style={{height:"90vh", border:"1px solid red"}} >
+    <Grid container className="flex" style={{height:"100vh", border:"1px solid red"}} >
       <h1 style={{color:"grey"}} >Background Here...</h1>
     </Grid>
     <MiddleNav />
