@@ -28,5 +28,5 @@
 .gridPageBox{
     background-color: white;
     height: 250px;
-    margin-top: 25px;
+    margin-top: 25px !important;
 }
