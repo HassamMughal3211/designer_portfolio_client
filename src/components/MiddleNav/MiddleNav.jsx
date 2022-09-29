@@ -11,7 +11,7 @@ const MiddleNav = () => {
             <button className="middleNavButton" >Whiteboard</button>
         </Grid>
         <Grid item container className='gridPage flex' xs={12} >
-            <Grid item container xs={12} style={{ height:"100%", justifyContent:"space-evenly"}} >
+            <Grid item container xs={12} style={{ height:"100%", justifyContent:"space-evenly", marginBottom:"20px"}} >
                 <Grid item md={3.8} className="gridPageBox" ></Grid>
                 <Grid item md={3.8} className="gridPageBox" ></Grid>
                 <Grid item md={3.8} className="gridPageBox" ></Grid>
