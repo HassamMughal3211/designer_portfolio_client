@@ -21,3 +21,12 @@
     border-radius: 10rem;
     background-color: transparent;
 }
+.gridPage{
+    min-height: 80vh;
+    background-color: black;
+}
+.gridPageBox{
+    background-color: white;
+    height: 250px;
+    margin-top: 25px !important;
+}
