@@ -10,7 +10,7 @@ const MainRoutes = () => {
       element: <Home />,
     },
     {
-        path: "/illustrations",
+        path: "/illustration",
         element: <Illustration />,
     },
   ]);
