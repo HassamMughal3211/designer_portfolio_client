@@ -9,6 +9,7 @@ const Illustration = () => {
   return (
     <>
       <LandingNavbar />
+      <div style={{height:"10vh"}}></div>
       <SecondNavbar />
       <Grid Container className="content">
         <Grid className="title flex">
