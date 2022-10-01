@@ -38,7 +38,6 @@ const MiddleNav = () => {
               </Grid>
             ))
           }
-
         </Grid>
       </Grid>
     </Grid>
