@@ -1,5 +1,5 @@
 .content{
-    height: 200vh;
+    height: auto;
     background-color: black;
 }
 .title{
@@ -8,15 +8,15 @@
 }
 
 .item1{
-    /* background-color: white; */
-    /* border: 2PX SOLID RED; */
+    background-color: white;
+    border: 2PX SOLID RED;
     height: 50%;
     width: 100%;
 }
 
 .item2{
-    /* background-color: rgb(91, 42, 42); */
-    /* border: 2PX SOLID RED; */
+    background-color: rgb(91, 42, 42);
+    border: 2PX SOLID RED;
     height: 100%;
     width: 100%;
 }
@@ -30,7 +30,7 @@
 }
 .row2{
     display: flex;
-    height: 30vh;
+    /* height: 30vh; */
     width: 100vw;
 }
 .column1{
@@ -38,5 +38,5 @@
 }
 .column2{
     flex: 2;
-    height: 60vh;
+    /* height: 60vh; */
 }

@@ -9,8 +9,8 @@ import "./Illustration.css";
 const Illustration = () => {
   return (
     <>
-      {/* <LandingNavbar /> */}
-      {/* <SecondNavbar /> */}
+      <LandingNavbar />
+      <SecondNavbar />
       <Grid Container className="content">
         <Grid className="title flex">
           <Typography variant="h3"> Logo </Typography>
@@ -18,9 +18,9 @@ const Illustration = () => {
 
         {/* first content */}
 
-        <Grid className="row1" xs={12}>
-          <Grid className="column1" md={3} xs={12}>
-            <Grid className="item1 flex" xs={12}>
+        <Grid item container className="row1" xs={12}>
+          <Grid item container className="column1" md={3} xs={12}>
+            <Grid item className="item1 flex" xs={12}>
               <AspectRatio
                 ratio="1"
                 sx={{ minWidth: 100, borderRadius: "sm", overflow: "auto" }}
@@ -37,7 +37,7 @@ const Illustration = () => {
                 />
               </AspectRatio>
             </Grid>
-            <Grid className="item1 flex" xs={12}>
+            <Grid item className="item1 flex" xs={12}>
               <AspectRatio
                 ratio="1"
                 sx={{ minWidth: 100, borderRadius: "sm", overflow: "auto" }}
@@ -55,11 +55,11 @@ const Illustration = () => {
               </AspectRatio>
             </Grid>{" "}
           </Grid>
-          <Grid className="column2" md={6} xs={12}>
-            <Grid className="item2 flex" xs={12}>
+          <Grid item container className="column2" md={6} xs={12}>
+            <Grid item className="item2 flex" xs={12}>
               <AspectRatio
                 ratio="1"
-                sx={{ minWidth: 350, borderRadius: "sm", overflow: "auto" }}
+                sx={{ minWidth: 100, borderRadius: "sm", overflow: "auto" }}
               >
                 <img
                   style={{ background: "black" }}
@@ -74,8 +74,8 @@ const Illustration = () => {
               </AspectRatio>
             </Grid>
           </Grid>
-          <Grid className="column1" md={3} xs={12}>
-            <Grid className="item1 flex" xs={12}>
+          <Grid item container className="column1" md={3} xs={12}>
+            <Grid item className="item1 flex" xs={12}>
               <AspectRatio
                 ratio="1"
                 sx={{ minWidth: 100, borderRadius: "sm", overflow: "auto" }}
@@ -92,7 +92,7 @@ const Illustration = () => {
                 />
               </AspectRatio>
             </Grid>{" "}
-            <Grid className="item1 flex" xs={12}>
+            <Grid item className="item1 flex" xs={12}>
               <AspectRatio
                 ratio="1"
                 sx={{ minWidth: 100, borderRadius: "sm", overflow: "auto" }}
@@ -112,8 +112,8 @@ const Illustration = () => {
           </Grid>
         </Grid>
 
-        <Grid className="row2" xs={12}>
-          <Grid className="item2 flex" md={3} xs={12}>
+        <Grid container item className="row2" xs={12}>
+          <Grid item className="item2 flex" md={3} xs={12}>
             {" "}
             <AspectRatio
               ratio="1"
@@ -131,7 +131,7 @@ const Illustration = () => {
               />
             </AspectRatio>
           </Grid>
-          <Grid className="item2 flex" md={3} xs={12}>
+          <Grid item className="item2 flex" md={3} xs={12}>
             {" "}
             <AspectRatio
               ratio="1"
@@ -149,7 +149,7 @@ const Illustration = () => {
               />
             </AspectRatio>
           </Grid>
-          <Grid className="item2 flex" md={3} xs={12}>
+          <Grid item className="item2 flex" md={3} xs={12}>
             {" "}
             <AspectRatio
               ratio="1"
@@ -167,7 +167,7 @@ const Illustration = () => {
               />
             </AspectRatio>
           </Grid>
-          <Grid className="item2 flex" md={3} xs={12}>
+          <Grid item className="item2 flex" md={3} xs={12}>
             {" "}
             <AspectRatio
               ratio="1"
@@ -188,10 +188,10 @@ const Illustration = () => {
         </Grid>
 
         {/* second content */}
-   
-        <Grid className="row1" xs={12}>
-          <Grid className="column1" md={3} xs={12}>
-            <Grid className="item1 flex" xs={12}>
+
+        <Grid item container className="row1" xs={12}>
+          <Grid item container className="column1" md={3} xs={12}>
+            <Grid item className="item1 flex" xs={12}>
               <AspectRatio
                 ratio="1"
                 sx={{ minWidth: 100, borderRadius: "sm", overflow: "auto" }}
@@ -208,7 +208,7 @@ const Illustration = () => {
                 />
               </AspectRatio>
             </Grid>
-            <Grid className="item1 flex" xs={12}>
+            <Grid item className="item1 flex" xs={12}>
               <AspectRatio
                 ratio="1"
                 sx={{ minWidth: 100, borderRadius: "sm", overflow: "auto" }}
@@ -226,11 +226,11 @@ const Illustration = () => {
               </AspectRatio>
             </Grid>{" "}
           </Grid>
-          <Grid className="column2" md={6} xs={12}>
-            <Grid className="item2 flex" xs={12}>
+          <Grid item container className="column2" md={6} xs={12}>
+            <Grid item className="item2 flex" xs={12}>
               <AspectRatio
                 ratio="1"
-                sx={{ minWidth: 350, borderRadius: "sm", overflow: "auto" }}
+                sx={{ minWidth: 100, borderRadius: "sm", overflow: "auto" }}
               >
                 <img
                   style={{ background: "black" }}
@@ -245,8 +245,8 @@ const Illustration = () => {
               </AspectRatio>
             </Grid>
           </Grid>
-          <Grid className="column1" md={3} xs={12}>
-            <Grid className="item1 flex" xs={12}>
+          <Grid item container className="column1" md={3} xs={12}>
+            <Grid item className="item1 flex" xs={12}>
               <AspectRatio
                 ratio="1"
                 sx={{ minWidth: 100, borderRadius: "sm", overflow: "auto" }}
@@ -263,7 +263,7 @@ const Illustration = () => {
                 />
               </AspectRatio>
             </Grid>{" "}
-            <Grid className="item1 flex" xs={12}>
+            <Grid item className="item1 flex" xs={12}>
               <AspectRatio
                 ratio="1"
                 sx={{ minWidth: 100, borderRadius: "sm", overflow: "auto" }}
@@ -283,8 +283,8 @@ const Illustration = () => {
           </Grid>
         </Grid>
 
-        <Grid className="row2" xs={12}>
-          <Grid className="item2 flex" md={3} xs={12}>
+        <Grid container item className="row2" xs={12}>
+          <Grid item className="item2 flex" md={3} xs={12}>
             {" "}
             <AspectRatio
               ratio="1"
@@ -302,7 +302,7 @@ const Illustration = () => {
               />
             </AspectRatio>
           </Grid>
-          <Grid className="item2 flex" md={3} xs={12}>
+          <Grid item className="item2 flex" md={3} xs={12}>
             {" "}
             <AspectRatio
               ratio="1"
@@ -320,7 +320,7 @@ const Illustration = () => {
               />
             </AspectRatio>
           </Grid>
-          <Grid className="item2 flex" md={3} xs={12}>
+          <Grid item className="item2 flex" md={3} xs={12}>
             {" "}
             <AspectRatio
               ratio="1"
@@ -338,7 +338,7 @@ const Illustration = () => {
               />
             </AspectRatio>
           </Grid>
-          <Grid className="item2 flex" md={3} xs={12}>
+          <Grid item className="item2 flex" md={3} xs={12}>
             {" "}
             <AspectRatio
               ratio="1"
