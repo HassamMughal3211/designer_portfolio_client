@@ -4,7 +4,7 @@ import "./SecondNavbar.css"
 
 const SecondNavbar = () => {
   return (
-    <Grid container className="secondNavMain flex">
+    <Grid container className="secondNav flex">
         <Grid md={12} item className='flex'>
             <button className="secondNavButtonShadow " >2D Animation</button>
             <button className="secondNavButtonShadow" >3D Animation</button>
