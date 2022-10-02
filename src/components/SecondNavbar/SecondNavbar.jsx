@@ -5,27 +5,27 @@ import "./SecondNavbar.css";
 const SecondNavbar = () => {
   return (
     <Grid container className="secondNav flex">
-      <Grid iem md={12} item className="flex">
+      {/* <span className="space" style={{height:"10vh", width:"100v", backghroundColor:"black"}} >     </span> */}
+      <Grid iem md={12} sx={{p:0.5, mt:"10vh" }}  item className="flex">
         <button item className="secondNavButtonShadow ">
-          2D Animation
+          LOGO
         </button>
         <button item className="secondNavButtonShadow">
-          3D Animation
+          T-shirt
         </button>
         <button item className="secondNavButton">
-          Whiteboard
+          Banners
         </button>
         <button item className="secondNavButtonShadow ">
-          2D Animation
+          Business Card
         </button>
         <button item className="secondNavButtonShadow">
-          3D Animation
+          Brand identity
         </button>
         <button item className="secondNavButton">
-          Whiteboard
+          Social media post
         </button>
       </Grid>
-      <Grid item container className="gridPage" xs={12}></Grid>
     </Grid>
   );
 };

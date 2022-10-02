@@ -8,6 +8,7 @@
     height: 10vh;
     background-color: var(--navbarBackground);
     position: fixed;
+    z-index: 99999999999;
 }
 
 .menuOptions span {
