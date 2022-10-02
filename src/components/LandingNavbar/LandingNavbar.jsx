@@ -13,6 +13,7 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import Button from '@mui/material/Button';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const LandingNavbar = () => {
   const [state, setState] = React.useState({
@@ -38,18 +39,48 @@ const LandingNavbar = () => {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <h3 style={{ minHeight: "8vh", width: "100%" }} className="flex" >Logo Here</h3>
-      <Divider />
       <List>
-        {['Animation', 'Illustration', 'Graphic Designing', 'Book Illustration'].map((text, index) => (
-          <ListItem key={text} disablePadding>
+        <Divider />
+        <Link to="/">
+          <ListItem key={"Animation"} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {<ArrowForwardIosIcon />}
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary={'Animation'} />
             </ListItemButton>
           </ListItem>
-        ))}
+        </Link>
+        <Divider />
+        <Link to="/illustration">
+          <ListItem key={"Illustrations"} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {<ArrowForwardIosIcon />}
+              </ListItemIcon>
+              <ListItemText primary={'Illustrations'} />
+            </ListItemButton>
+          </ListItem>
+        </Link>
+        <Divider />
+        <ListItem key={"Graphic Designing"} disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              {<ArrowForwardIosIcon />}
+            </ListItemIcon>
+            <ListItemText primary={'Graphic Designing'} />
+          </ListItemButton>
+        </ListItem>
+        <Divider />
+        <ListItem key={"Book Illustration"} disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              {<ArrowForwardIosIcon />}
+            </ListItemIcon>
+            <ListItemText primary={'Book Illustration'} />
+          </ListItemButton>
+        </ListItem>
+        <Divider />
       </List>
     </Box>
   );
@@ -59,7 +90,7 @@ const LandingNavbar = () => {
         <Box item container md={0.5} sx={{ display: { xs: "none", md: "block" } }} ></Box>
         <Grid item container md={1.5} xs={10} style={{ height: '100%' }} className='flex'>Logo</Grid>
         <Box item container md={4} sx={{ display: { xs: "none", md: "block" } }} ></Box>
-        <Box item container sx={{ display: { xs: "none", md: "flex" }, width:"50%", marginLeft:"30%" }} style={{ height: '100%' }} >
+        <Box item container sx={{ display: { xs: "none", md: "flex" }, width: "50%", marginLeft: "30%" }} style={{ height: '100%' }} >
           <Grid item md={12} className='flex menuOptions' >
             <span>
               <Link to="/">
