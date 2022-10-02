@@ -36,8 +36,9 @@ const SecondNavbar = ({ setSubCategory }) => {
   const [personName, setPersonName] = React.useState('Logo');
   const theme = useTheme();
   const handleChange = (e) => {
-    console.log(e.target.value[0])
-    setPersonName(e.target.value )
+    console.log(e.target.value)
+    setPersonName(e.target.value)
+    setSubCategory(e.target.value)
   };
 
 
@@ -47,22 +48,22 @@ const SecondNavbar = ({ setSubCategory }) => {
     <Grid container className="secondNav flex">
       {/* <span className="space" style={{height:"10vh", width:"100v", backghroundColor:"black"}} >     </span> */}
       <Box display={{ xs: "none", md: "block" }} className="flex">
-        <button item onClick={setSubCategory("logo")} className="secondNavButtonShadow ">
+        <button item onClick={() => setSubCategory("logo")} className="secondNavButtonShadow ">
           LOGO
         </button>
-        <button item onClick={setSubCategory("t-shirt")} className="secondNavButtonShadow">
+        <button item onClick={() => setSubCategory("t-shirt")} className="secondNavButtonShadow">
           T-shirt
         </button>
-        <button item onClick={setSubCategory("banner")} className="secondNavButton">
+        <button item onClick={() => setSubCategory("banner")} className="secondNavButton">
           Banner
         </button>
-        <button item onClick={setSubCategory("businesscard")} className="secondNavButtonShadow ">
+        <button item onClick={() => setSubCategory("businesscard")} className="secondNavButtonShadow ">
           Business Card
         </button>
-        <button item onClick={setSubCategory("brandidentity")} className="secondNavButtonShadow">
+        <button item onClick={() => setSubCategory("brandidentity")} className="secondNavButtonShadow">
           Brand identity
         </button>
-        <button item onClick={setSubCategory("socailmediapost")} className="secondNavButton">
+        <button item onClick={() => setSubCategory("socailmediapost")} className="secondNavButton">
           Social media post
         </button>
       </Box>

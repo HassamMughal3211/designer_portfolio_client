@@ -5,7 +5,7 @@ import "./Illustration.css";
 import img from "../../assets/img.jpg";
 import { BASE_URL } from "../constants/constants";
 
-const Content = () => {
+const Content = ({subCategory}) => {
   const [imgArray, setImgArray] = useState();
   const [isLoaded, setIsLoaded] = useState(false);
   //   const imgArray = [
@@ -82,6 +82,10 @@ const Content = () => {
   //       category: "Logo",
   //     },
   //   ];
+
+  useEffect(() =>{
+    console.log(subCategory)
+  },[subCategory])
 
   const getAllImg = async () => {
     try {
