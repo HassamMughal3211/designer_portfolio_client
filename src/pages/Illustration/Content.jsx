@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { AspectRatio } from "@mui/joy";
-import { Grid, Typography } from "@mui/material";
+import { CircularProgress, Grid, Typography } from "@mui/material";
 import "./Illustration.css";
 import img from "../../assets/img.jpg";
 import { BASE_URL } from "../constants/constants";
@@ -84,6 +84,7 @@ const Content = () => {
   //   ];
 
   const getAllImg = async () => {
+
     try {
       await fetch(
         `${BASE_URL}/api/v1/project/filterProjects?category=${"illustrations"}&subCategory=${"logo"}`
@@ -496,7 +497,7 @@ const Content = () => {
           </Grid>
         </Grid>
       ) : (
-        "loading"
+        <CircularProgress />
       )}
     </>
   );
