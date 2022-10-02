@@ -5,28 +5,29 @@ import "./MiddleNav.css"
 
 const MiddleNav = () => {
   const [allFiles, setAllFiles] = useState([]);
-  const [category, setCategory] = useState("2danimation");
+  const [category, setCategory] = useState("animation");
+  const [subCategory, setSubCategory] = useState("2danimation")
 
   useEffect(() => {
-    fetch(`${BASE_URL}/api/v1/project/filterProjects?category=${category}`).then((response) => response.json()).then((data) => setAllFiles(data.data))
+    fetch(`${BASE_URL}/api/v1/project/filterProjects?category=${category}&subCategory=${subCategory}`).then((response) => response.json()).then((data) => setAllFiles(data.data))
   }, []);
 
   const categoryButtonClicked = (param) => {
-    setCategory(param);
-    fetch(`${BASE_URL}/api/v1/project/filterProjects?category=${param}`).then((response) => response.json()).then((data) => setAllFiles(data.data))
+    setSubCategory(param);
+    fetch(`${BASE_URL}/api/v1/project/filterProjects?category=${category}&subCategory=${param}`).then((response) => response.json()).then((data) => setAllFiles(data.data))
   }
 
   return (
     <Grid container className="middleNavMain flex">
       <Grid md={6} xs={12} item style={{ height: '100%' }} className='flex'>
         <button 
-        className={category === '2danimation' ? "middleNavButton" : "middleNavButtonShadow" }
+        className={subCategory === '2danimation' ? "middleNavButton" : "middleNavButtonShadow" }
          onClick={() => categoryButtonClicked('2danimation')} >2D Animation</button>
         <button 
-        className={category === '3danimation' ? "middleNavButton" : "middleNavButtonShadow" }
+        className={subCategory === '3danimation' ? "middleNavButton" : "middleNavButtonShadow" }
          onClick={() => categoryButtonClicked('3danimation')} >3D Animation</button>
         <button 
-        className={category === 'whiteboard' ? "middleNavButton" : "middleNavButtonShadow" } 
+        className={subCategory === 'whiteboard' ? "middleNavButton" : "middleNavButtonShadow" } 
         onClick={() => categoryButtonClicked('whiteboard')} >Whiteboard</button>
       </Grid>
       <Grid item container className='gridPage flex' xs={12} >
