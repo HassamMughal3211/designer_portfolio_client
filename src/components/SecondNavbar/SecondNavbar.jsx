@@ -20,7 +20,14 @@ const MenuProps = {
 };
 
 const names = [
-  'Logo', 'T-shirt', 'Banner', 'Business Card', 'Brand identity', 'Social media post'
+  {key:"logo", value:"Logo"},
+  {key:"tshirt", value:"T-Shirt"},
+  {key:"banner", value:"Banner"},
+  {key:"businesscard", value:"Business Card"},
+  {key:"brandidentity", value:"Brand Identity"},
+  {key:"socialmediapost", value:"Social Media Post"},
+
+  // 'Logo', 'T-shirt', 'Banner', 'Business Card', 'Brand identity', 'Social media post'
 ];
 
 function getStyles(name, personName, theme) {
@@ -32,13 +39,17 @@ function getStyles(name, personName, theme) {
   };
 }
 
-const SecondNavbar = ({ setSubCategory }) => {
+const SecondNavbar = ({ setSubCategory, subCategory }) => {
   const [personName, setPersonName] = React.useState('Logo');
   const theme = useTheme();
   const handleChange = (e) => {
-    console.log(e.target.value)
+    console.log(e)
     setPersonName(e.target.value)
-    setSubCategory(e.target.value)
+    names.map((item) =>{
+      if(item.value === e.target.value){
+        setSubCategory(item.key)
+      }
+    })
   };
 
 
@@ -46,24 +57,23 @@ const SecondNavbar = ({ setSubCategory }) => {
 
   return (
     <Grid container className="secondNav flex">
-      {/* <span className="space" style={{height:"10vh", width:"100v", backghroundColor:"black"}} >     </span> */}
       <Box display={{ xs: "none", md: "block" }} className="flex">
-        <button item onClick={() => setSubCategory("logo")} className="secondNavButtonShadow ">
+        <button item onClick={() => setSubCategory("logo")} className={subCategory === 'logo' ? "secondNavButton" : "secondNavButtonShadow "}>
           LOGO
         </button>
-        <button item onClick={() => setSubCategory("t-shirt")} className="secondNavButtonShadow">
+        <button item onClick={() => setSubCategory("tshirt")} className={subCategory === 'tshirt' ? "secondNavButton" : "secondNavButtonShadow "}>
           T-shirt
         </button>
-        <button item onClick={() => setSubCategory("banner")} className="secondNavButton">
+        <button item onClick={() => setSubCategory("banner")} className={subCategory === 'banner' ? "secondNavButton" : "secondNavButtonShadow "}>
           Banner
         </button>
-        <button item onClick={() => setSubCategory("businesscard")} className="secondNavButtonShadow ">
+        <button item onClick={() => setSubCategory("businesscard")} className={subCategory === 'businesscard' ? "secondNavButton" : "secondNavButtonShadow "}>
           Business Card
         </button>
-        <button item onClick={() => setSubCategory("brandidentity")} className="secondNavButtonShadow">
+        <button item onClick={() => setSubCategory("brandidentity")} className={subCategory === 'brandidentity' ? "secondNavButton" : "secondNavButtonShadow "}>
           Brand identity
         </button>
-        <button item onClick={() => setSubCategory("socailmediapost")} className="secondNavButton">
+        <button item onClick={() => setSubCategory("socialmediapost")} className={subCategory === 'socialmediapost' ? "secondNavButton" : "secondNavButtonShadow "}>
           Social media post
         </button>
       </Box>
@@ -81,11 +91,11 @@ const SecondNavbar = ({ setSubCategory }) => {
             >
               {names.map((name) => (
                 <MenuItem
-                  key={name}
-                  value={name}
-                  style={getStyles(name, personName, theme)}
+                  key={name.key}
+                  value={name.value}
+                  style={getStyles(name.key, personName, theme)}
                 >
-                  {name}
+                  {name.value}
                 </MenuItem>
               ))}
             </Select>

@@ -15,7 +15,7 @@ const Illustration = () => {
     <div className="illusionConatiner">
     <LandingNavbar />
       <div style={{height:"10vh"}} ></div>
-      <SecondNavbar setSubCategory = {setSubCategory}/>
+      <SecondNavbar subCategory = {subCategory} setSubCategory = {setSubCategory}/>
           <Content  subCategory = {subCategory}/>
     
     </div>

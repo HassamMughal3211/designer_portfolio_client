@@ -7,7 +7,8 @@ import { BASE_URL } from "../constants/constants";
 
 const Content = ({subCategory}) => {
   const [imgArray, setImgArray] = useState();
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(true);
+  const [heading, setHeading] = useState("Logo");
   //   const imgArray = [
   //     {
   //       imageUrl: img,
@@ -83,14 +84,36 @@ const Content = ({subCategory}) => {
   //     },
   //   ];
 
+  const names = [
+    {key:"logo", value:"Logo"},
+    {key:"tshirt", value:"T-Shirt"},
+    {key:"banner", value:"Banner"},
+    {key:"businesscard", value:"Business Card"},
+    {key:"brandidentity", value:"Brand Identity"},
+    {key:"socialmediapost", value:"Social Media Post"},
+  
+    // 'Logo', 'T-shirt', 'Banner', 'Business Card', 'Brand identity', 'Social media post'
+  ];
+
+  const mainHeading = () =>{
+    names.filter((item) =>{
+      if(item.key === subCategory){
+        setHeading(item.value)
+      }
+    })
+  }
+
   useEffect(() =>{
     console.log(subCategory)
+    getAllImg()
+    mainHeading()
   },[subCategory])
 
   const getAllImg = async () => {
+    setIsLoaded(true)
     try {
       await fetch(
-        `${BASE_URL}/api/v1/project/filterProjects?category=${"illustrations"}&subCategory=${"logo"}`
+        `${BASE_URL}/api/v1/project/filterProjects?category=${"illustrations"}&subCategory=${subCategory ? subCategory : "logo"}`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -102,7 +125,7 @@ const Content = ({subCategory}) => {
           });
           console.log(arr);
           setImgArray(arr);
-          setIsLoaded(true);
+          setIsLoaded(false);
         });
     } catch (error) {}
   };
@@ -110,14 +133,15 @@ const Content = ({subCategory}) => {
   useEffect(() => {
     getAllImg();
   }, []);
+
+  
   return (
     <>
-      {isLoaded ? (
+      {!isLoaded ? (
         <Grid Container className="content">
           <Grid className="title flex">
             <Typography variant="h3" className="flex">
-              {" "}
-              Logo{" "}
+              {`${heading}`}
             </Typography>
           </Grid>
 
@@ -159,7 +183,7 @@ const Content = ({subCategory}) => {
                     width="100%"
                     src={imgArray[1].imageUrl}
                     // srcSet={`${item.src}?h=120&fit=crop&auto=format&dpr=2 2x`}
-                    alt={"item.titl"}
+                    alt={imgArray[1].imageUrl}
                   />
                 </AspectRatio>
               </Grid>
@@ -180,7 +204,7 @@ const Content = ({subCategory}) => {
                     width="100"
                     src={imgArray[2].imageUrl}
                     // srcSet={`${item.src}?h=120&fit=crop&auto=format&dpr=2 2x`}
-                    alt={"item.titl"}
+                    alt={imgArray[2].imageUrl}
                   />
                 </AspectRatio>
               </Grid>
@@ -201,7 +225,7 @@ const Content = ({subCategory}) => {
                     width="100%"
                     src={imgArray[3].imageUrl}
                     // srcSet={`${item.src}?h=120&fit=crop&auto=format&dpr=2 2x`}
-                    alt={"item.titl"}
+                    alt={imgArray[3].imageUrl}
                   />
                 </AspectRatio>
               </Grid>
@@ -220,7 +244,7 @@ const Content = ({subCategory}) => {
                     width="100%"
                     src={imgArray[4].imageUrl}
                     // srcSet={`${item.src}?h=120&fit=crop&auto=format&dpr=2 2x`}
-                    alt={"item.titl"}
+                    alt={imgArray[4].imageUrl}
                   />
                 </AspectRatio>
               </Grid>
@@ -244,7 +268,7 @@ const Content = ({subCategory}) => {
                   width="100%"
                   src={imgArray[5].imageUrl}
                   // srcSet={`${item.src}?h=120&fit=crop&auto=format&dpr=2 2x`}
-                  alt={"item.titl"}
+                  alt={imgArray[5].imageUrl}
                 />
               </AspectRatio>
             </Grid>
