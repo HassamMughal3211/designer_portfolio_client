@@ -30,3 +30,23 @@
     height: 250px;
     margin-top: 25px !important;
 }
+
+@media only screen and (max-width: 600px) {
+    .middleNavButtonShadow{
+        box-shadow: 10px 10px 50px 30px rgb(228, 244, 250);
+        border: none;
+        font-size: 0.7rem;
+        height: 2rem;
+        width: 10rem;
+        border-radius: 10rem;
+    }
+    .middleNavButton{
+        background-color: #ecb830;
+        border: none;
+        font-size: 0.7rem;
+        height: 2rem;
+        width: 10rem;
+        border-radius: 10rem;
+        /* margin: 0px 0.5rem; */
+    }
+  }

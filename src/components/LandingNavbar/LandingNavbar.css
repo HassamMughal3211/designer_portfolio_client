@@ -8,11 +8,15 @@
     height: 10vh;
     background-color: var(--navbarBackground);
     position: fixed;
-    z-index: 9999999999999999;
 }
 
 .menuOptions span {
     cursor: pointer;
     color: var(--white);
     font-weight: bold;
+}
+.css-1160xiw-MuiPaper-root-MuiDrawer-paper{
+    background-color: var(--navbarBackground) !important;
+    color: white !important;
+    font-weight: bold !important;
 }
