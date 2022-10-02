@@ -98,22 +98,24 @@ const Content = ({ subCategory }) => {
   const mainHeading = () => {
     names.filter((item) => {
       if (item.key === subCategory) {
-        setHeading(item.value)
+        setHeading(item.value);
       }
-    })
-  }
+    });
+  };
 
   useEffect(() => {
-    console.log(subCategory)
-    getAllImg()
-    mainHeading()
-  }, [subCategory])
+    console.log(subCategory);
+    getAllImg();
+    mainHeading();
+  }, [subCategory]);
 
   const getAllImg = async () => {
-    setIsLoaded(true)
+    setIsLoaded(true);
     try {
       await fetch(
-        `${BASE_URL}/api/v1/project/filterProjects?category=${"illustrations"}&subCategory=${subCategory ? subCategory : "logo"}`
+        `${BASE_URL}/api/v1/project/filterProjects?category=${"illustrations"}&subCategory=${
+          subCategory ? subCategory : "logo"
+        }`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -127,19 +129,18 @@ const Content = ({ subCategory }) => {
           setImgArray(arr);
           setIsLoaded(false);
         });
-    } catch (error) { }
+    } catch (error) {}
   };
 
   useEffect(() => {
     getAllImg();
   }, []);
 
-
   return (
     <>
       {!isLoaded ? (
         <Grid Container className="content">
-          <Grid item  className="title flex">
+          <Grid item className="title flex">
             <Typography variant="h3" className="flex">
               {`${heading}`}
             </Typography>
@@ -150,16 +151,22 @@ const Content = ({ subCategory }) => {
           <Grid item container className="row1" xs={12}>
             <Grid item container className="column1" sm={3} xs={12}>
               <Grid item className="item1 flex" xs={12}>
-                <AspectRatio className="images"
+                <AspectRatio
+                  className="images"
                   ratio="5/3"
                   sx={{
-                    minWidth: window.innerWidth > 1000  ? 320 : window.innerWidth > 600 ? 180 :  320,
+                    minWidth:
+                      window.innerWidth > 1000
+                        ? 320
+                        : window.innerWidth > 600
+                        ? 180
+                        : 320,
                     borderRadius: "sm",
                     overflow: "auto",
                   }}
                 >
                   <img
-                    style={{ background: "black" , margin:"10px 0px"}}
+                    style={{ background: "black", margin: "10px 0px" }}
                     height="100%"
                     width="100%"
                     src={imgArray[0].imageUrl}
@@ -169,16 +176,22 @@ const Content = ({ subCategory }) => {
                 </AspectRatio>
               </Grid>
               <Grid item className="item1 flex" xs={12}>
-                <AspectRatio className="images"
+                <AspectRatio
+                  className="images"
                   ratio="5/3"
                   sx={{
-                    minWidth: window.innerWidth > 1000  ? 320 : window.innerWidth > 600 ? 180 :  320,
+                    minWidth:
+                      window.innerWidth > 1000
+                        ? 320
+                        : window.innerWidth > 600
+                        ? 180
+                        : 320,
                     borderRadius: "sm",
                     overflow: "auto",
                   }}
                 >
                   <img
-                    style={{ background: "black" , margin:"10px 0px"}}
+                    style={{ background: "black", margin: "10px 0px" }}
                     height="100%"
                     width="100%"
                     src={imgArray[1].imageUrl}
@@ -190,16 +203,22 @@ const Content = ({ subCategory }) => {
             </Grid>
             <Grid item container className="column2" sm={6} xs={12}>
               <Grid item className="item2 flex" xs={12}>
-                <AspectRatio className="images"
+                <AspectRatio
+                  className="images"
                   ratio="5/3"
                   sx={{
-                    minWidth: window.innerWidth > 1000  ? 700 : window.innerWidth > 600 ? 350 :  320,
+                    minWidth:
+                      window.innerWidth > 1000
+                        ? 700
+                        : window.innerWidth > 600
+                        ? 350
+                        : 320,
                     borderRadius: "sm",
                     overflow: "auto",
                   }}
                 >
                   <img
-                    style={{ background: "black" , margin:"10px 0px"}}
+                    style={{ background: "black", margin: "10px 0px" }}
                     height="100"
                     width="100"
                     src={imgArray[2].imageUrl}
@@ -211,16 +230,22 @@ const Content = ({ subCategory }) => {
             </Grid>
             <Grid item container className="column1" sm={3} xs={12}>
               <Grid item className="item1 flex" xs={12}>
-                <AspectRatio className="images"
+                <AspectRatio
+                  className="images"
                   ratio="5/3"
                   sx={{
-                    minWidth: window.innerWidth > 1000  ? 320 : window.innerWidth > 600 ? 180 :  320,
+                    minWidth:
+                      window.innerWidth > 1000
+                        ? 320
+                        : window.innerWidth > 600
+                        ? 180
+                        : 320,
                     borderRadius: "sm",
                     overflow: "auto",
                   }}
                 >
                   <img
-                    style={{ background: "black" , margin:"10px 0px"}}
+                    style={{ background: "black", margin: "10px 0px" }}
                     height="100%"
                     width="100%"
                     src={imgArray[3].imageUrl}
@@ -230,16 +255,22 @@ const Content = ({ subCategory }) => {
                 </AspectRatio>
               </Grid>
               <Grid item className="item1 flex" xs={12}>
-                <AspectRatio className="images"
+                <AspectRatio
+                  className="images"
                   ratio="5/3"
                   sx={{
-                    minWidth: window.innerWidth > 1000  ? 320 : window.innerWidth > 600 ? 180 :  320,
+                    minWidth:
+                      window.innerWidth > 1000
+                        ? 320
+                        : window.innerWidth > 600
+                        ? 180
+                        : 320,
                     borderRadius: "sm",
                     overflow: "auto",
                   }}
                 >
                   <img
-                    style={{ background: "black" , margin:"10px 0px"}}
+                    style={{ background: "black", margin: "10px 0px" }}
                     height="100%"
                     width="100%"
                     src={imgArray[4].imageUrl}
@@ -254,16 +285,22 @@ const Content = ({ subCategory }) => {
           <Grid container item className="row2" xs={12}>
             <Grid item className="item2 flex" sm={3} xs={12}>
               {" "}
-              <AspectRatio className="images"
+              <AspectRatio
+                className="images"
                 ratio="5/3"
                 sx={{
-                  minWidth: window.innerWidth > 1000  ? 320 : window.innerWidth > 600 ? 180 :  320,
+                  minWidth:
+                    window.innerWidth > 1000
+                      ? 320
+                      : window.innerWidth > 600
+                      ? 180
+                      : 320,
                   borderRadius: "sm",
                   overflow: "auto",
                 }}
               >
                 <img
-                  style={{ background: "black" , margin:"10px 0px"}}
+                  style={{ background: "black", margin: "10px 0px" }}
                   height="100%"
                   width="100%"
                   src={imgArray[5].imageUrl}
@@ -274,16 +311,22 @@ const Content = ({ subCategory }) => {
             </Grid>
             <Grid item className="item2 flex" sm={3} xs={12}>
               {" "}
-              <AspectRatio className="images"
+              <AspectRatio
+                className="images"
                 ratio="5/3"
                 sx={{
-                  minWidth: window.innerWidth > 1000  ? 320 : window.innerWidth > 600 ? 180 :  320,
+                  minWidth:
+                    window.innerWidth > 1000
+                      ? 320
+                      : window.innerWidth > 600
+                      ? 180
+                      : 320,
                   borderRadius: "sm",
                   overflow: "auto",
                 }}
               >
                 <img
-                  style={{ background: "black" , margin:"10px 0px"}}
+                  style={{ background: "black", margin: "10px 0px" }}
                   height="100%"
                   width="100%"
                   src={imgArray[6].imageUrl}
@@ -294,16 +337,22 @@ const Content = ({ subCategory }) => {
             </Grid>
             <Grid item className="item2 flex" sm={3} xs={12}>
               {" "}
-              <AspectRatio className="images"
+              <AspectRatio
+                className="images"
                 ratio="5/3"
                 sx={{
-                  minWidth: window.innerWidth > 1000  ? 320 : window.innerWidth > 600 ? 180 :  320,
+                  minWidth:
+                    window.innerWidth > 1000
+                      ? 320
+                      : window.innerWidth > 600
+                      ? 180
+                      : 320,
                   borderRadius: "sm",
                   overflow: "auto",
                 }}
               >
                 <img
-                  style={{ background: "black" , margin:"10px 0px"}}
+                  style={{ background: "black", margin: "10px 0px" }}
                   height="100%"
                   width="100%"
                   src={imgArray[7].imageUrl}
@@ -314,16 +363,22 @@ const Content = ({ subCategory }) => {
             </Grid>
             <Grid item className="item2 flex" sm={3} xs={12}>
               {" "}
-              <AspectRatio className="images"
+              <AspectRatio
+                className="images"
                 ratio="5/3"
                 sx={{
-                  minWidth: window.innerWidth > 1000  ? 320 : window.innerWidth > 600 ? 180 :  320,
+                  minWidth:
+                    window.innerWidth > 1000
+                      ? 320
+                      : window.innerWidth > 600
+                      ? 180
+                      : 320,
                   borderRadius: "sm",
                   overflow: "auto",
                 }}
               >
                 <img
-                  style={{ background: "black" , margin:"10px 0px"}}
+                  style={{ background: "black", margin: "10px 0px" }}
                   height="100%"
                   width="100%"
                   src={imgArray[8].imageUrl}
@@ -339,16 +394,22 @@ const Content = ({ subCategory }) => {
           <Grid item container className="row1" xs={12}>
             <Grid item container className="column1" sm={3} xs={12}>
               <Grid item className="item1 flex" xs={12}>
-                <AspectRatio className="images"
+                <AspectRatio
+                  className="images"
                   ratio="5/3"
                   sx={{
-                    minWidth: window.innerWidth > 1000  ? 320 : window.innerWidth > 600 ? 180 :  320,
+                    minWidth:
+                      window.innerWidth > 1000
+                        ? 320
+                        : window.innerWidth > 600
+                        ? 180
+                        : 320,
                     borderRadius: "sm",
                     overflow: "auto",
                   }}
                 >
                   <img
-                    style={{ background: "black" , margin:"10px 0px"}}
+                    style={{ background: "black", margin: "10px 0px" }}
                     height="100%"
                     width="100%"
                     src={imgArray[9].imageUrl}
@@ -358,16 +419,22 @@ const Content = ({ subCategory }) => {
                 </AspectRatio>
               </Grid>
               <Grid item className="item1 flex" xs={12}>
-                <AspectRatio className="images"
+                <AspectRatio
+                  className="images"
                   ratio="5/3"
                   sx={{
-                    minWidth: window.innerWidth > 1000  ? 320 : window.innerWidth > 600 ? 180 :  320,
+                    minWidth:
+                      window.innerWidth > 1000
+                        ? 320
+                        : window.innerWidth > 600
+                        ? 180
+                        : 320,
                     borderRadius: "sm",
                     overflow: "auto",
                   }}
                 >
                   <img
-                    style={{ background: "black" , margin:"10px 0px"}}
+                    style={{ background: "black", margin: "10px 0px" }}
                     height="100%"
                     width="100%"
                     src={imgArray[10].imageUrl}
@@ -379,16 +446,22 @@ const Content = ({ subCategory }) => {
             </Grid>
             <Grid item container className="column2" sm={6} xs={12}>
               <Grid item className="item2 flex" xs={12}>
-                <AspectRatio className="images"
+                <AspectRatio
+                  className="images"
                   ratio="5/3"
                   sx={{
-                    minWidth: window.innerWidth > 1000  ? 700 : window.innerWidth > 600 ? 350 :  320,
+                    minWidth:
+                      window.innerWidth > 1000
+                        ? 700
+                        : window.innerWidth > 600
+                        ? 350
+                        : 320,
                     borderRadius: "sm",
                     overflow: "auto",
                   }}
                 >
                   <img
-                    style={{ background: "black" , margin:"10px 0px"}}
+                    style={{ background: "black", margin: "10px 0px" }}
                     height="100"
                     width="100"
                     src={imgArray[11].imageUrl}
@@ -400,16 +473,22 @@ const Content = ({ subCategory }) => {
             </Grid>
             <Grid item container className="column1" sm={3} xs={12}>
               <Grid item className="item1 flex" xs={12}>
-                <AspectRatio className="images"
+                <AspectRatio
+                  className="images"
                   ratio="5/3"
                   sx={{
-                    minWidth: window.innerWidth > 1000  ? 320 : window.innerWidth > 600 ? 180 :  320,
+                    minWidth:
+                      window.innerWidth > 1000
+                        ? 320
+                        : window.innerWidth > 600
+                        ? 180
+                        : 320,
                     borderRadius: "sm",
                     overflow: "auto",
                   }}
                 >
                   <img
-                    style={{ background: "black" , margin:"10px 0px"}}
+                    style={{ background: "black", margin: "10px 0px" }}
                     height="100%"
                     width="100%"
                     src={imgArray[12].imageUrl}
@@ -419,16 +498,22 @@ const Content = ({ subCategory }) => {
                 </AspectRatio>
               </Grid>
               <Grid item className="item1 flex" xs={12}>
-                <AspectRatio className="images"
+                <AspectRatio
+                  className="images"
                   ratio="5/3"
                   sx={{
-                    minWidth: window.innerWidth > 1000  ? 320 : window.innerWidth > 600 ? 180 :  320,
+                    minWidth:
+                      window.innerWidth > 1000
+                        ? 320
+                        : window.innerWidth > 600
+                        ? 180
+                        : 320,
                     borderRadius: "sm",
                     overflow: "auto",
                   }}
                 >
                   <img
-                    style={{ background: "black" , margin:"10px 0px"}}
+                    style={{ background: "black", margin: "10px 0px" }}
                     height="100%"
                     width="100%"
                     src={imgArray[13].imageUrl}
@@ -443,16 +528,22 @@ const Content = ({ subCategory }) => {
           <Grid container item className="row2" xs={12}>
             <Grid item className="item2 flex" sm={3} xs={12}>
               {" "}
-              <AspectRatio className="images"
+              <AspectRatio
+                className="images"
                 ratio="5/3"
                 sx={{
-                  minWidth: window.innerWidth > 1000  ? 320 : window.innerWidth > 600 ? 180 :  320,
+                  minWidth:
+                    window.innerWidth > 1000
+                      ? 320
+                      : window.innerWidth > 600
+                      ? 180
+                      : 320,
                   borderRadius: "sm",
                   overflow: "auto",
                 }}
               >
                 <img
-                  style={{ background: "black" , margin:"10px 0px"}}
+                  style={{ background: "black", margin: "10px 0px" }}
                   height="100%"
                   width="100%"
                   src={imgArray[14].imageUrl}
@@ -463,16 +554,22 @@ const Content = ({ subCategory }) => {
             </Grid>
             <Grid item className="item2 flex" sm={3} xs={12}>
               {" "}
-              <AspectRatio className="images"
+              <AspectRatio
+                className="images"
                 ratio="5/3"
                 sx={{
-                  minWidth: window.innerWidth > 1000  ? 320 : window.innerWidth > 600 ? 180 :  320,
+                  minWidth:
+                    window.innerWidth > 1000
+                      ? 320
+                      : window.innerWidth > 600
+                      ? 180
+                      : 320,
                   borderRadius: "sm",
                   overflow: "auto",
                 }}
               >
                 <img
-                  style={{ background: "black" , margin:"10px 0px"}}
+                  style={{ background: "black", margin: "10px 0px" }}
                   height="100%"
                   width="100%"
                   src={imgArray[15].imageUrl}
@@ -483,16 +580,22 @@ const Content = ({ subCategory }) => {
             </Grid>
             <Grid item className="item2 flex" sm={3} xs={12}>
               {" "}
-              <AspectRatio className="images"
+              <AspectRatio
+                className="images"
                 ratio="5/3"
                 sx={{
-                  minWidth: window.innerWidth > 1000  ? 320 : window.innerWidth > 600 ? 180 :  320,
+                  minWidth:
+                    window.innerWidth > 1000
+                      ? 320
+                      : window.innerWidth > 600
+                      ? 180
+                      : 320,
                   borderRadius: "sm",
                   overflow: "auto",
                 }}
               >
                 <img
-                  style={{ background: "black" , margin:"10px 0px"}}
+                  style={{ background: "black", margin: "10px 0px" }}
                   height="100%"
                   width="100%"
                   src={imgArray[16].imageUrl}
@@ -503,16 +606,22 @@ const Content = ({ subCategory }) => {
             </Grid>
             <Grid item className="item2 flex" sm={3} xs={12}>
               {" "}
-              <AspectRatio className="images"
+              <AspectRatio
+                className="images"
                 ratio="5/3"
                 sx={{
-                  minWidth: window.innerWidth > 1000  ? 320 : window.innerWidth > 600 ? 180 :  320,
+                  minWidth:
+                    window.innerWidth > 1000
+                      ? 320
+                      : window.innerWidth > 600
+                      ? 180
+                      : 320,
                   borderRadius: "sm",
                   overflow: "auto",
                 }}
               >
                 <img
-                  style={{ background: "black" , margin:"10px 0px"}}
+                  style={{ background: "black", margin: "10px 0px" }}
                   height="100%"
                   width="100%"
                   src={imgArray[17].imageUrl}
@@ -524,7 +633,17 @@ const Content = ({ subCategory }) => {
           </Grid>
         </Grid>
       ) : (
-        <CircularProgress />
+        <Grid
+        container
+          style={{
+            height:"100vh",
+            Display: "flex",
+            justifyContent: "center",
+            alignItem: "center",
+          }}
+        >
+          <CircularProgress item sx={{ color: `#ecb830`, fontSize: "200%" }} />
+        </Grid>
       )}
     </>
   );
