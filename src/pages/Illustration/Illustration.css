@@ -1,22 +1,24 @@
 .content{
-    height: auto;
-    background-color: black;
+    /* height: auto; */
+    /* margin-top: 20vh; */
+    background-color: rgb(14, 14, 14);
+    
 }
 .title{
-    padding: 2%;
+    /* padding: 1%; */
     color: white;
 }
 
 .item1{
-    background-color: white;
-    border: 2PX SOLID RED;
+    /* background-color: white; */
+    /* border: 2PX SOLID RED; */
     height: 50%;
     width: 100%;
 }
 
 .item2{
-    background-color: rgb(91, 42, 42);
-    border: 2PX SOLID RED;
+    /* background-color: rgb(91, 42, 42); */
+    /* border: 2PX SOLID RED; */
     height: 100%;
     width: 100%;
 }
