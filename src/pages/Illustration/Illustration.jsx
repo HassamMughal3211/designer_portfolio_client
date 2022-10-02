@@ -1,6 +1,6 @@
 import { AspectRatio } from "@mui/joy";
 import { Grid, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import LandingNavbar from "../../components/LandingNavbar/LandingNavbar";
 import SecondNavbar from "../../components/SecondNavbar/SecondNavbar";
 // import "./Illustration.css";
@@ -8,12 +8,15 @@ import SecondNavbar from "../../components/SecondNavbar/SecondNavbar";
 import Content from "./Content";
 
 const Illustration = () => {
+  const [subCategory,setSubCategory] = useState("logo")
+
+
   return (
     <div className="illusionConatiner">
     <LandingNavbar />
-      <SecondNavbar />
-      {/* <div className="space">s</div> */}
-      <Content />
+      <div style={{height:"10vh"}} ></div>
+      <SecondNavbar subCategory = {subCategory} setSubCategory = {setSubCategory}/>
+          <Content  subCategory = {subCategory}/>
     
     </div>
      );

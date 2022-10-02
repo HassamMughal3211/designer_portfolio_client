@@ -40,7 +40,7 @@ const MiddleNav = () => {
           {
             !loading ?
               allFiles.map((item, idx) => (
-                <Grid item md={3.8} xs={12} className="gridPageBox">
+                <Grid item sm={3.8} xs={12} className="gridPageBox">
                   <img src={`${BASE_URL}${item.fileData[0]}`} alt={idx} id={idx} height="100%" width="100%" />
                 </Grid>
               ))
