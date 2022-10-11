@@ -139,19 +139,19 @@ const LandingNavbar = () => {
         >
           <Grid item md={12} className="flex menuOptions">
             <Button style={{ color: "white" }}>
-              <Link to="/" style={{fontSize : '18px'}}>
+              <Link to="/" style={{fontSize : '15px'}}>
                 <b>Animation</b>
               </Link>
             </Button>
             <Button style={{ color: "white" }}>
-              <Link to="/illustration" style={{fontSize : '18px'}}>
+              <Link to="/illustration" style={{fontSize : '15px'}}>
                 <b>Illustration</b>
               </Link>
             </Button>
-            <Button style={{ color: "white",fontSize : '18px' }} >
+            <Button style={{ color: "white",fontSize : '15px' }} >
               <b>Graphic Designing</b>
             </Button>
-            <Button style={{ color: "white",fontSize : '18px' }}>
+            <Button style={{ color: "white",fontSize : '15px' }}>
               <b>Book Illustration</b>
             </Button>
           </Grid>
