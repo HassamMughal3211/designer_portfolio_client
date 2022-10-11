@@ -13,7 +13,6 @@ const Home = () => {
         <video width="100%" height="auto" controls={false} autoPlay={true} loop="true" muted >
           <source src={backGroundVideo} type="video/mp4" />
         </video>
-
       </Grid>
       <MiddleNav />
     </>

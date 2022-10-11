@@ -97,7 +97,7 @@ const LandingNavbar = () => {
           container
           md={1.5}
           xs={10}
-          style={{ height: "100%" }}
+          style={{ height: "100%", color:"white" }}
           className="flex"
         >
           {" "}
@@ -119,7 +119,7 @@ const LandingNavbar = () => {
               alt={"item.titl"}
             />
           </AspectRatio>{" "}
-          Logo
+          <b>LOGO HERE</b> 
         </Grid>
         <Box
           item
