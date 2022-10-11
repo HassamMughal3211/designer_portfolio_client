@@ -5,7 +5,7 @@
 }
 
 .mainNavbar{
-    height: 10vh;
+    height: 9vh;
     background-color: var(--navbarBackground);
     position: fixed;
     z-index: 99999999999;

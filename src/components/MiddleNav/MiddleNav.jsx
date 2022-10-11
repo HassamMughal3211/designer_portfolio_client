@@ -24,16 +24,19 @@ const MiddleNav = () => {
 
   return (
     <Grid container className="middleNavMain flex">
-      <Grid md={6} xs={12} item style={{ height: '100%' }} className='flex'>
-        <button
-          className={subCategory === '2danimation' ? "middleNavButton" : "middleNavButtonShadow"}
-          onClick={() => categoryButtonClicked('2danimation')} >2D Animation</button>
-        <button
-          className={subCategory === '3danimation' ? "middleNavButton" : "middleNavButtonShadow"}
-          onClick={() => categoryButtonClicked('3danimation')} >3D Animation</button>
-        <button
-          className={subCategory === 'whiteboard' ? "middleNavButton" : "middleNavButtonShadow"}
-          onClick={() => categoryButtonClicked('whiteboard')} >Whiteboard</button>
+      <Grid xs={12} item style={{ height: '100%', background: 'white' }} className='flex'>
+
+        <Grid md={6} xs={12} item style={{ height: '100%', background: 'white' }} className='flex'>
+          <button
+            className={subCategory === '2danimation' ? "middleNavButton" : "middleNavButtonShadow"}
+            onClick={() => categoryButtonClicked('2danimation')} >2D Animation</button>
+          <button
+            className={subCategory === '3danimation' ? "middleNavButton" : "middleNavButtonShadow"}
+            onClick={() => categoryButtonClicked('3danimation')} >3D Animation</button>
+          <button
+            className={subCategory === 'whiteboard' ? "middleNavButton" : "middleNavButtonShadow"}
+            onClick={() => categoryButtonClicked('whiteboard')} >Whiteboard</button>
+        </Grid>
       </Grid>
       <Grid item container className='gridPage flex' xs={12} >
         <Grid item container md={12} xs={11} style={{ height: "100%", justifyContent: "space-evenly", marginBottom: "20px" }} >
