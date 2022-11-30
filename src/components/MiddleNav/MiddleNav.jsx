@@ -16,6 +16,7 @@ const MiddleNav = () => {
   }, []);
 
   const categoryButtonClicked = async (param) => {
+    console.log("params", param)
     setLoading(true)
     setSubCategory(param);
     await fetch(`${BASE_URL}/api/v1/project/filterProjects?category=${category}&subCategory=${param}`).then((response) => response.json()).then((data) => setAllFiles(data.data))

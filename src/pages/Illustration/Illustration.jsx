@@ -12,10 +12,10 @@ const Illustration = () => {
 
 
   return (
-    <div className="illusionConatiner">
+    <div className="illusionConatiner content">
     <LandingNavbar />
       <div style={{height:"10vh"}} ></div>
-      <SecondNavbar subCategory = {subCategory} setSubCategory = {setSubCategory}/>
+      {/* <SecondNavbar subCategory = {subCategory} setSubCategory = {setSubCategory}/> */}
           <Content  subCategory = {subCategory}/>
     
     </div>
