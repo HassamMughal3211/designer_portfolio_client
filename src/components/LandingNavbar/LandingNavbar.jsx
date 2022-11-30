@@ -97,7 +97,7 @@ const LandingNavbar = () => {
           container
           md={1.5}
           xs={10}
-          style={{ height: "100%", color: "white" }}
+          style={{ height: "100%", color:"white" }}
           className="flex"
         >
           {" "}
@@ -105,7 +105,7 @@ const LandingNavbar = () => {
             className="images"
             ratio="1"
             sx={{
-              minWidth: 40,
+              minWidth:40,
               borderRadius: "sm",
               overflow: "auto",
             }}
@@ -119,7 +119,7 @@ const LandingNavbar = () => {
               alt={"item.titl"}
             />
           </AspectRatio>{" "}
-          <b>LOGO HERE</b>
+          <b>LOGO HERE</b> 
         </Grid>
         <Box
           item
@@ -138,22 +138,14 @@ const LandingNavbar = () => {
           style={{ height: "100%" }}
         >
           <Grid item md={12} className="flex menuOptions">
-            <Button style={{ color: "white" }}>
-              <Link to="/" style={{fontSize : '15px'}}>
-                <b>Animation</b>
-              </Link>
-            </Button>
-            <Button style={{ color: "white" }}>
-              <Link to="/illustration" style={{fontSize : '15px'}}>
-                <b>Illustration</b>
-              </Link>
-            </Button>
-            <Button style={{ color: "white",fontSize : '15px' }} >
-              <b>Graphic Designing</b>
-            </Button>
-            <Button style={{ color: "white",fontSize : '15px' }}>
-              <b>Book Illustration</b>
-            </Button>
+            <span>
+              <Link to="/">Animation</Link>
+            </span>
+            <span>
+              <Link to="/illustration">Illustration</Link>
+            </span>
+            <span>Graphic Designing</span>
+            <span>Book Illustration</span>
           </Grid>
         </Box>
         <Box

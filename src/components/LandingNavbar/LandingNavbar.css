@@ -8,7 +8,7 @@
     height: 9vh;
     background-color: var(--navbarBackground);
     position: fixed;
-    /* z-index: 99999999999; */
+    z-index: 99999999999;
     background: rgba(0, 0, 0,0.1);
 }
 
