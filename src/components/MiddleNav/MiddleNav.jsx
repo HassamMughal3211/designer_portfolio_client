@@ -25,7 +25,7 @@ const MiddleNav = () => {
 
   return (
     <Grid container className="middleNavMain flex">
-      <Grid xs={12} item style={{ height: '100%', background: 'white' }} className='flex'>
+      <Grid xs={12} item style={{ height: '100%', background: 'white',zIndex:'1' }} className='flex'>
 
         <Grid md={6} xs={12} item style={{ height: '100%', background: 'white' }} className='flex'>
           <button
@@ -39,7 +39,7 @@ const MiddleNav = () => {
             onClick={() => categoryButtonClicked('whiteboard')} >Whiteboard</button>
         </Grid>
       </Grid>
-      <Grid item container className='gridPage flex' xs={12} >
+      <Grid item container className='gridPage flex' xs={12} style={{zIndex:'2'}} >
         <Grid item container md={12} xs={11} style={{ height: "100%", justifyContent: "space-evenly", marginBottom: "20px" }} >
           {
             !loading ?
