@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import LandingNavbar from "../../components/LandingNavbar/LandingNavbar";
-import Content from "./Content";
+import Content from "../Illustration/Content";
 
-const Illustration = () => {
-  const [subCategory, setSubCategory] = useState("illustration");
+const Graphicdesign = () => {
+  const [subCategory, setSubCategory] = useState("graphic design");
 
   return (
     <div className="illusionConatiner content">
@@ -14,4 +14,4 @@ const Illustration = () => {
   );
 };
 
-export default Illustration;
+export default Graphicdesign;

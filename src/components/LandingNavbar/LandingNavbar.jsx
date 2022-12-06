@@ -66,19 +66,39 @@ const LandingNavbar = () => {
           </ListItem>
         </Link>
         <Divider />
-        <ListItem key={"Graphic Designing"} disablePadding>
-          <ListItemButton>
-            <ListItemIcon>{<ArrowForwardIosIcon />}</ListItemIcon>
-            <ListItemText primary={"Graphic Designing"} />
-          </ListItemButton>
-        </ListItem>
+        <Link to="/graphicdesign">
+          <ListItem key={"Graphic Design"} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>{<ArrowForwardIosIcon />}</ListItemIcon>
+              <ListItemText primary={"Graphic Design"} />
+            </ListItemButton>
+          </ListItem>
+        </Link>
         <Divider />
-        <ListItem key={"Book Illustration"} disablePadding>
-          <ListItemButton>
-            <ListItemIcon>{<ArrowForwardIosIcon />}</ListItemIcon>
-            <ListItemText primary={"Book Illustration"} />
-          </ListItemButton>
-        </ListItem>
+        <Link to="/bookillustration">
+          <ListItem key={"Book Illustration"} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>{<ArrowForwardIosIcon />}</ListItemIcon>
+              <ListItemText primary={"Book Illustration"} />
+            </ListItemButton>
+          </ListItem>
+        </Link>
+        <Link to="/logo">
+          <ListItem key={"Logo"} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>{<ArrowForwardIosIcon />}</ListItemIcon>
+              <ListItemText primary={"Logo"} />
+            </ListItemButton>
+          </ListItem>
+        </Link>
+        <Link to="/gifs">
+          <ListItem key={"GIFs"} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>{<ArrowForwardIosIcon />}</ListItemIcon>
+              <ListItemText primary={"GIFs"} />
+            </ListItemButton>
+          </ListItem>
+        </Link>
         <Divider />
       </List>
     </Box>
@@ -97,7 +117,7 @@ const LandingNavbar = () => {
           container
           md={1.5}
           xs={10}
-          style={{ height: "100%", color:"white" }}
+          style={{ height: "100%", color: "white" }}
           className="flex"
         >
           {" "}
@@ -105,7 +125,7 @@ const LandingNavbar = () => {
             className="images"
             ratio="1"
             sx={{
-              minWidth:40,
+              minWidth: 40,
               borderRadius: "sm",
               overflow: "auto",
             }}
@@ -119,7 +139,7 @@ const LandingNavbar = () => {
               alt={"item.titl"}
             />
           </AspectRatio>{" "}
-          <b>LOGO HERE</b> 
+          <b>LOGO HERE</b>
         </Grid>
         <Box
           item
@@ -144,8 +164,18 @@ const LandingNavbar = () => {
             <span>
               <Link to="/illustration">Illustration</Link>
             </span>
-            <span>Graphic Designing</span>
-            <span>Book Illustration</span>
+            <span>
+              <Link to="/graphicdesign">Graphic Design</Link>
+            </span>
+            <span>
+              <Link to="/bookillustration">Book Illustration</Link>
+            </span>
+            <span>
+              <Link to="/logo">Logo</Link>
+            </span>
+            <span>
+              <Link to="/gifs">GIFs</Link>
+            </span>
           </Grid>
         </Box>
         <Box
