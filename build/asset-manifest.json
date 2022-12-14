@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2641d569.css",
+    "main.js": "/static/js/main.474d40ea.js",
+    "static/js/787.97645cec.chunk.js": "/static/js/787.97645cec.chunk.js",
+    "static/media/No-Black-Start-Mobile-test.mp4": "/static/media/No-Black-Start-Mobile-test.83c030c7864e7352dd53.mp4",
+    "static/media/logo.jpg": "/static/media/logo.6514e251f19092fcdee4.jpg",
+    "static/media/img.jpg": "/static/media/img.6e485c470c63f0c6e7c4.jpg",
+    "index.html": "/index.html",
+    "main.2641d569.css.map": "/static/css/main.2641d569.css.map",
+    "main.474d40ea.js.map": "/static/js/main.474d40ea.js.map",
+    "787.97645cec.chunk.js.map": "/static/js/787.97645cec.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2641d569.css",
+    "static/js/main.474d40ea.js"
+  ]
+}
