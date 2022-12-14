@@ -25,7 +25,7 @@ const MiddleNav = () => {
 
   return (
     <Grid container className="middleNavMain flex">
-      <Grid xs={12} item style={{ height: '100%', background: 'white',zIndex:'1' }} className='flex'>
+      <Grid xs={12} item style={{ height: '100%', background: 'white', zIndex: '1' }} className='flex'>
 
         <Grid md={6} xs={12} item style={{ height: '100%', background: 'white' }} className='flex'>
           <button
@@ -39,13 +39,14 @@ const MiddleNav = () => {
             onClick={() => categoryButtonClicked('whiteboard')} >Whiteboard</button>
         </Grid>
       </Grid>
-      <Grid item container className='gridPage flex' xs={12} style={{zIndex:'2'}} >
+      <Grid item container className='gridPage flex' xs={12} style={{ zIndex: '2' }} >
         <Grid item container md={12} xs={11} style={{ height: "100%", justifyContent: "space-evenly", marginBottom: "20px" }} >
           {
             !loading ?
               allFiles.map((item, idx) => (
                 <Grid item sm={3.8} xs={12} className="gridPageBox">
-                  <img src={`${BASE_URL}${item.fileData[0]}`} alt={idx} id={idx} height="100%" width="100%" />
+                  <video src={`${BASE_URL}${item.fileData[0]}`} alt={idx} id={idx} onMouseOver={event => event.target.play()}
+                    onMouseOut={event => event.target.pause()} controls={false} autoPlay={false} loop="true" muted height="100%" width="100%" />
                 </Grid>
               ))
               :
