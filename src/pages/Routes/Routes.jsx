@@ -1,6 +1,7 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import BookIllustration from "../BookIllustration/BookIllustration";
+import Gifs from "../GIFs/Gifs";
 import Graphicdesign from "../GraphicDesign/Graphicdesign";
 import Home from "../Home/Home";
 import Illustration from '../Illustration/Illustration';
@@ -30,7 +31,7 @@ const MainRoutes = () => {
     },
     {
         path: "/gifs",
-        element: <Illustration />,
+        element: <Gifs />,
     },
   ]);
 
