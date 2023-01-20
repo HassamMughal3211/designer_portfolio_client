@@ -76,6 +76,16 @@ const MiddleNav = () => {
           >
             Whiteboard
           </button>
+          <button
+            className={
+              subCategory === "demovideos"
+                ? "middleNavButton"
+                : "middleNavButtonShadow"
+            }
+            onClick={() => categoryButtonClicked("demovideos")}
+          >
+            Demo Videos
+          </button>
         </Grid>
       </Grid>
       <Grid
@@ -114,7 +124,7 @@ const MiddleNav = () => {
             ))
           ) : (
             <CircularProgress className="animationLoader" disableShrink />
-          )}s
+          )}
         </Grid>
       </Grid>
     </Grid>
