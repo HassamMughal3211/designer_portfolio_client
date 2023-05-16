@@ -12,6 +12,9 @@ const MainRoutes = () => {
     {
       path: "/",
       element: <Home />,
+    },{
+      path: "/:id",
+      element: <Home />,
     },
     {
         path: "/illustration",
