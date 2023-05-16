@@ -32,7 +32,7 @@ const MiddleNav = () => {
       <Grid
         xs={12}
         item
-        style={{ height: "100%", background: "white", zIndex: "1", overflow:"hidden" }}
+        style={{ height: "100%", background: "white", zIndex: "1", overflow: "hidden" }}
         className="flex"
       >
         <Grid
@@ -50,12 +50,14 @@ const MiddleNav = () => {
                   ? "middleNavButton"
                   : "middleNavButtonShadow"
               }
+              style={{ cursor: "pointer" }}
             >
               2D Animation
             </button>
           </Link>
           <Link to="/3danimation">
             <button
+              style={{ cursor: "pointer" }}
               className={
                 subCategory === "3danimation"
                   ? "middleNavButton"
@@ -68,6 +70,7 @@ const MiddleNav = () => {
           <Link to="/whiteboard">
 
             <button
+              style={{ cursor: "pointer" }}
               className={
                 subCategory === "whiteboard"
                   ? "middleNavButton"
@@ -80,6 +83,7 @@ const MiddleNav = () => {
           <Link to="/demovideos">
 
             <button
+              style={{ cursor: "pointer" }}
               className={
                 subCategory === "demovideos"
                   ? "middleNavButton"
