@@ -25,7 +25,7 @@ const MainRoutes = () => {
         element: <Graphicdesign/>,
     },
     {
-        path: "/bookillustration",
+        path: "/bookillustration/:key",
         element: <BookIllustration />,
     },
     {

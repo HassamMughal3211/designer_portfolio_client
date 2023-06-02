@@ -149,7 +149,7 @@ const Content = ({ subCategory }) => {
               alignItems: "center",
             }}
           >
-            <Typography variant="h5" gutterBottom style={{ color: "white" }}>
+            <Typography variant="h5" gutterBottom style={{ color: "white" }} sx={{pt:2}}>
               {subCategory.toUpperCase()}
             </Typography>
           </Grid>

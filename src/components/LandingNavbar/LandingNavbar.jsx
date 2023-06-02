@@ -75,7 +75,7 @@ const LandingNavbar = () => {
           </ListItem>
         </Link>
         <Divider />
-        <Link to="/bookillustration">
+        <Link to="/bookillustration/Vector Art">
           <ListItem key={"Book Illustration"} disablePadding>
             <ListItemButton>
               <ListItemIcon>{<ArrowForwardIosIcon />}</ListItemIcon>
@@ -168,7 +168,7 @@ const LandingNavbar = () => {
               <Link to="/graphicdesign">Graphic Design</Link>
             </span>
             <span>
-              <Link to="/bookillustration">Book Illustration</Link>
+              <Link to="/bookillustration/Vector Art">Book Illustration</Link>
             </span>
             <span>
               <Link to="/logo">Logo</Link>
