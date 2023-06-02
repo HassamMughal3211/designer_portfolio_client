@@ -3,40 +3,36 @@ import React, { useEffect, useState } from "react";
 import { BASE_URL } from "../../pages/constants/constants";
 import "./MiddleNav.css";
 import CircularProgress from "@mui/material/CircularProgress";
+import { Link, useParams } from "react-router-dom";
 
 const MiddleNav = () => {
+  const params = useParams();
   const [allFiles, setAllFiles] = useState([]);
   const [category, setCategory] = useState("animation");
   const [subCategory, setSubCategory] = useState("2danimation");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(
-      `${BASE_URL}/api/v1/project/filterProjects?category=${category}&subCategory=${subCategory}`
-    )
-      .then((response) => response.json())
-      .then((data) => setAllFiles(data.data));
-    setLoading(false);
-  }, []);
-
-  const categoryButtonClicked = async (param) => {
-    console.log("params", param);
+    console.log(params.id, "123123")
     setLoading(true);
-    setSubCategory(param);
-    await fetch(
-      `${BASE_URL}/api/v1/project/filterProjects?category=${category}&subCategory=${param}`
+    setSubCategory(params.id)
+    fetch(
+      `${BASE_URL}/api/v1/project/filterProjects?category=${category}&subCategory=${params.id}`
     )
       .then((response) => response.json())
-      .then((data) => setAllFiles(data.data));
-    setLoading(false);
-  };
+      .then((data) => {
+        setLoading(false);
+        setAllFiles(data.data);
+      });
+  }, [params]);
+
 
   return (
     <Grid container className="middleNavMain flex">
       <Grid
         xs={12}
         item
-        style={{ height: "100%", background: "white", zIndex: "1" }}
+        style={{ height: "100%", background: "white", zIndex: "1", overflow: "hidden" }}
         className="flex"
       >
         <Grid
@@ -46,36 +42,57 @@ const MiddleNav = () => {
           style={{ height: "100%", background: "white" }}
           className="flex"
         >
-          <button
-            className={
-              subCategory === "2danimation"
-                ? "middleNavButton"
-                : "middleNavButtonShadow"
-            }
-            onClick={() => categoryButtonClicked("2danimation")}
-          >
-            2D Animation
-          </button>
-          <button
-            className={
-              subCategory === "3danimation"
-                ? "middleNavButton"
-                : "middleNavButtonShadow"
-            }
-            onClick={() => categoryButtonClicked("3danimation")}
-          >
-            3D Animation
-          </button>
-          <button
-            className={
-              subCategory === "whiteboard"
-                ? "middleNavButton"
-                : "middleNavButtonShadow"
-            }
-            onClick={() => categoryButtonClicked("whiteboard")}
-          >
-            Whiteboard
-          </button>
+          <Link to="/2danimation">
+
+            <button
+              className={
+                subCategory === "2danimation"
+                  ? "middleNavButton"
+                  : "middleNavButtonShadow"
+              }
+              style={{ cursor: "pointer" }}
+            >
+              2D Animation
+            </button>
+          </Link>
+          <Link to="/3danimation">
+            <button
+              style={{ cursor: "pointer" }}
+              className={
+                subCategory === "3danimation"
+                  ? "middleNavButton"
+                  : "middleNavButtonShadow"
+              }
+            >
+              3D Animation
+            </button>
+          </Link>
+          <Link to="/whiteboard">
+
+            <button
+              style={{ cursor: "pointer" }}
+              className={
+                subCategory === "whiteboard"
+                  ? "middleNavButton"
+                  : "middleNavButtonShadow"
+              }
+            >
+              Whiteboard
+            </button>
+          </Link>
+          <Link to="/demovideos">
+
+            <button
+              style={{ cursor: "pointer" }}
+              className={
+                subCategory === "demovideos"
+                  ? "middleNavButton"
+                  : "middleNavButtonShadow"
+              }
+            >
+              Demo Videos
+            </button>
+          </Link>
         </Grid>
       </Grid>
       <Grid
@@ -114,7 +131,7 @@ const MiddleNav = () => {
             ))
           ) : (
             <CircularProgress className="animationLoader" disableShrink />
-          )}s
+          )}
         </Grid>
       </Grid>
     </Grid>
