@@ -58,7 +58,7 @@ const SecondNavbar = ({ setSubCategory, subCategory }) => {
   return (
     <Grid container className="secondNav flex">
       <Box display={{ xs: "none", md: "block" }} className="flex">
-        <button item onClick={() => setSubCategory("logo")} className={subCategory === 'logo' ? "secondNavButton" : "secondNavButtonShadow "}>
+        <button  item onClick={() => setSubCategory("logo")} className={subCategory === 'logo' ? "secondNavButton" : "secondNavButtonShadow "}>
           LOGO
         </button>
         <button item onClick={() => setSubCategory("tshirt")} className={subCategory === 'tshirt' ? "secondNavButton" : "secondNavButtonShadow "}>
