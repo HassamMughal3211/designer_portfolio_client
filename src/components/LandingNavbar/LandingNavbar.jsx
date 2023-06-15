@@ -75,7 +75,7 @@ const LandingNavbar = () => {
           </ListItem>
         </Link>
         <Divider />
-        <Link to="/bookillustration/Vector Art">
+        <Link to="/bookillustration/Book Illustrations">
           <ListItem key={"Book Illustration"} disablePadding>
             <ListItemButton>
               <ListItemIcon>{<ArrowForwardIosIcon />}</ListItemIcon>
@@ -159,7 +159,7 @@ const LandingNavbar = () => {
         >
           <Grid item md={12} className="flex menuOptions">
             <span>
-              <Link to="/">Animation</Link>
+              <Link to="/2danimation">Animation</Link>
             </span>
             <span>
               <Link to="/illustration">Illustration</Link>
@@ -168,7 +168,7 @@ const LandingNavbar = () => {
               <Link to="/graphicdesign">Graphic Design</Link>
             </span>
             <span>
-              <Link to="/bookillustration/Vector Art">Book Illustration</Link>
+              <Link to="/bookillustration/Book Illustrations">Book Illustration</Link>
             </span>
             <span>
               <Link to="/logo">Logo</Link>

@@ -21,13 +21,26 @@ const MenuProps = {
 };
 
 const names = [
-  { key: "logo", value: "Logo" },
-  { key: "tshirt", value: "T-Shirt" },
-  { key: "banner", value: "Banner" },
-  { key: "businesscard", value: "Business Card" },
-  { key: "brandidentity", value: "Brand Identity" },
-  { key: "socialmediapost", value: "Social Media Post" },
-
+  {
+    key: "Book Illustrations",
+    value: "Book Illustrations",
+    path: "/bookillustration/Book Illustrations",
+  },
+  {
+    key: "Digital Illustrations",
+    value: "Digital Illustrations",
+    path: "/bookillustration/Digital Illustrations",
+  },
+  {
+    key: "Book Covers",
+    value: "Book Covers",
+    path: "/bookillustration/Book Covers",
+  },
+  {
+    key: "Animal Illustrations",
+    value: "Animal Illustrations",
+    path: "/bookillustration/Animal Illustrations",
+  },
   // 'Logo', 'T-shirt', 'Banner', 'Business Card', 'Brand identity', 'Social media post'
 ];
 
@@ -50,6 +63,7 @@ const SecondNavbar = ({ setSubCategory, subCategory }) => {
     names.map((item) => {
       if (item.value === e.target.value) {
         setSubCategory(item.key);
+        navigate(item.path);
       }
     });
   };
@@ -60,16 +74,16 @@ const SecondNavbar = ({ setSubCategory, subCategory }) => {
         <button
           item
           onClick={() => {
-            navigate("/bookillustration/Vector Art");
-            setSubCategory("Vector Art");
+            navigate("/bookillustration/Book Illustrations");
+            setSubCategory("Book Illustrations");
           }}
           className={
-            subCategory === "Vector Art"
+            subCategory === "Book Illustrations"
               ? "secondNavButton"
               : "secondNavButtonShadow "
           }
         >
-          Vector Art
+          Book Illustrations
         </button>
         <button
           item
@@ -88,16 +102,16 @@ const SecondNavbar = ({ setSubCategory, subCategory }) => {
         <button
           item
           onClick={() => {
-            navigate("/bookillustration/Water Color");
-            setSubCategory("Water Color");
+            navigate("/bookillustration/Book Covers");
+            setSubCategory("Book Covers");
           }}
           className={
-            subCategory === "Water Color"
+            subCategory === "Book Covers"
               ? "secondNavButton"
               : "secondNavButtonShadow "
           }
         >
-          Water Color
+          Book Covers
         </button>
         <button
           item
